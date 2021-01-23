@@ -1,5 +1,4 @@
 # gender-classification-based-on-twitter-data
-MAJOR PROJECT
 Gender classification on twitter data using ensemble techniques
 
 Problem statement:
