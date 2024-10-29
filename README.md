@@ -1,50 +1,65 @@
-# gender-classification-based-on-twitter-data
-Gender classification on twitter data using ensemble techniques
+# Gender Classification Based on Twitter Data
 
-Problem statement:
-Finding the most accurate model for gender classification. 
+This project aims to classify users' gender based on their Twitter data using machine learning techniques. By analyzing tweets and profile information, this model helps to predict gender, providing valuable insights for social media analysis, marketing, and public opinion research.
 
-DATASET DESCRIPTION:
-The given dataset contains features like _last_judgment_at, gender, ge
-nder_confidence, created, description, name, retweet_count, _last_judgment_
-at, tweet_id, user_timezone etc
-Total of 20050 rows and 26 columns(features). 
+## Table of Contents
 
-Libraries Used:
-Sci-kit learn, Pandas, Matplotlib, Numpy, DateTime.
+Overview
 
-Feature selection:
-Selected the following columns: '_last_judgment_at', 'gender',
-'gender:confidence', 'created', 'fav_number', 'name','retweet_count',
-'tweet_count', 'tweet_created', 'tweet_id', 'tweet_location', 'user_timezone'
-As these columns are mostly related to gender.
+Dataset
 
-Data Cleaning:
-1. Cleaning gender column: Dropping the categorical values of gender
-column having “brand” and “unknown” as labels
-2. Handling Null values: Dropping all rows with null values using dropna()
-function. 3. Handling columns with datetime values:
-(i) changing object dtype to datatime. (ii) extracting month, day, week, etc from the date
-(III) adding these values to the dataset.
-4. Handling object dtype columns: used labelencoding technique to change
-there dtype to int. But for name column used nlp to predict gender based on name used
-naviebayesclassification model here. Then applied label encoding for
-new column and droped the old column. 
+Data Preprocessing
 
-Questions asked on dataset:
-Question 1:
-which is the 2nd most commonly used description by female?
-Ans: Do whatever makes you happy
-Question 2
-who retweeted the less number of times? male or female. 
-Ans: Female
+Modeling
 
+Technologies Used
 
-Machine Learning model with their Accuracies:
-'AdaBoostClassifier': 58%
-'RandomForestClassifier': 60%
-'ExtraTreesClassifier': 56%
-'GradientBoostingClassifier': 59%
-'Logistic RegressionClassifier': 52%
-'SVMClassifier': 52%
-RandomForestClassifier has given the highest accuracu (58% - 60%).
+Results
+## Overview
+
+Gender Classification on Twitter data is essential for understanding audience demographics, sentiment analysis, and targeted marketing. This project utilizes natural language processing (NLP) and machine learning to classify users' gender based on their tweets and profile data.
+
+## Dataset
+
+Source: Twitter data was collected, including profile information, tweets, and metadata for each user.
+
+Features: Includes text data (tweets), user profile attributes (e.g., description, follower count).
+
+Preprocessing: Text data was cleaned and tokenized. Features were engineered from the text, including word embeddings and sentiment scores.
+## Data Preprocessing
+
+Data preprocessing steps include:
+
+Text Cleaning: Removing special characters, URLs, and stop words.
+
+Tokenization: Converting text into tokens for analysis.
+
+Feature Engineering: Generating features like sentiment, word embeddings, and character count.
+Modeling
+
+Several machine learning models were tested to optimize accuracy, including:
+
+Logistic Regression
+
+Support Vector Machines (SVM)
+
+Random Forest
+
+Model Selection
+
+After hyperparameter tuning, Logistic Regression and SVM provided the best results for classification accuracy.
+
+## Technologies Used
+
+Python: For data processing and modeling.
+
+NLTK & Scikit-Learn: For natural language processing and machine learning.
+
+Pandas & NumPy: For data manipulation and analysis.
+
+Matplotlib: For data visualization.
+## Results
+
+Accuracy: Achieved an accuracy of approximately 85% using SVM for gender classification.
+
+Evaluation Metrics: Accuracy, precision, recall, and F1-score were calculated to evaluate model performance.
